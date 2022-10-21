@@ -32,7 +32,17 @@ const licenseChoices = ["Apache 2.0 License",
     "The zlib/libpng License",
     "None"];
 
-inquirer
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, userInputs) {
+    fs.writeFile(fileName, generateMarkdown(userInputs), (err) =>
+        err ? console.log(err) : console.log('Successfully created new Readme.md!')
+    );
+}
+
+// TODO: Create a function to initialize app
+function init() { 
+    inquirer
     .prompt([
         {
             type: 'input',
@@ -85,20 +95,8 @@ inquirer
         console.log(userInputs);
         writeToFile('generated/Generated-Readme.md', userInputs);
     });
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, userInputs) {
-    fs.writeFile(fileName, generateMarkdown(userInputs), (err) =>
-        err ? console.log(err) : console.log('Successfully created new Readme.md!')
-    );
 }
 
-// TODO: Create a function to initialize app
-// function init() { 
-
-// }
-
 // Function call to initialize app
-// init();
+init();
 
