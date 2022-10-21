@@ -133,7 +133,14 @@ function renderLicenseLink(licenseInput) {
 function renderLicenseSection(licenseInput) {
   // let badge = renderLicenseBadge(licenseInput);
   let link = renderLicenseLink(licenseInput);
-  let licenseSelection = `This project is licensed under the [${licenseInput}](${link})`;
+  let licenseSelection = "";
+  
+  if(licenseInput === "None"){
+    licenseSelection = "This project has no license!";
+  }
+  else{
+    licenseSelection = `This project is licensed under the [${licenseInput}](${link})`;
+  }
 
   return licenseSelection;
 }
@@ -145,7 +152,7 @@ function generateMarkdown(userInputs) {
   return `
 
 # ${userInputs.projectName}
-${renderLicenseBadge(licenseInput)}
+${renderLicenseBadge(userInputs.projectLicense)}
 
 ## Description
 ${userInputs.projectDescription}
@@ -166,7 +173,7 @@ ${userInputs.dependenciesCommand}
 ${userInputs.usingRepo}
 
 ## License 
-${renderLicenseSection(licenseInput)}
+${renderLicenseSection(userInputs.projectLicense)}
 
 ## Contributing
 ${userInputs.contributingRepo}
