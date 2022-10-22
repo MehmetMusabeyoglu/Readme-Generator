@@ -1,9 +1,10 @@
-# Readme-Generator
+# Readme Generator
 
 
 ## Table of Contents
 * [Description](#description)
 * [Usage](#usage)
+* [Usage Demonstration Link](#usage-demonstration-link)
 * [User Story](#user-story)
 * [Screenshots](#screenshots)
 * [Code Snippet](#code-snippet)
@@ -14,15 +15,15 @@
 
 ## Description
 
-Book Reco's offers a simple, easy to use interface to search for books by genre. With Book Reco’s™, each search returns books randomly picked from the whole universe of books belonging to that genre; no repetitions, no skewing towards the popular ones which a fan had probably already read. From the list of recommended books, a book lover can see information and ratings of these books, as well as a summary.The application has been deployed to the Github Pages at [Book Recos](https://sbhikshe.github.io/Book-Recos/).
+Readme Generator is a node.js application that runs on the console and generates a professionally styled "readme.md" file for the user based on the console inputs they provide. The application has been deployed to the drive at [Google Drive](https://drive.google.com/file/d/1JLpQM6ABCH3OW0PvaAJlU7fZmuf2PNWd/view).
 
 
 ## Usage
 
-Upon first visiting the webpage, the user should be greeted with a header with our logo, a dropdown menu to select a book genre, and 5 New York Times Best Sellers.
-The user can either refresh the page to see a new listing of New York Times best sellers or choose a genre from the dropdown menu. Either choice will generate 5 randomly chosen books. 
-Each book displayed will have 2 buttons underneath it. The 'see more' button will redirect to either an amazon or google books link for that book. The 'save book' button will save that book's data to local storage. This also appends the book's title and author to a list on the left, underneath the search form. Underneath the displayed books, the saved book's cover will appear in a gallery. Clicking this cover will also redirect to its corresponding amazon or google books link. The book gallery will remain upon page refresh.
+User starts the application by running "node index.js" in their console. Once the application starts, the user is prompted with a set of questions about the specific project they want to generate this "readme.md" file for. Questions prompted by the application includes the user's contact info, project title, description, licenses used, and usage/testing commands for the project. When user provides their answers using console input, "readme.me" file is generated with the user's answers and a table of contents.
 
+## Usage Demonstration Link
+Link to the video that demonstrates the usage of this application can be found at [here](https://drive.google.com/file/d/1JLpQM6ABCH3OW0PvaAJlU7fZmuf2PNWd/view).
 
 ## User Story
 
@@ -33,19 +34,49 @@ Each book displayed will have 2 buttons underneath it. The 'see more' button wil
 
 ## Screenshots
 
-### *1. Select genre from dropdown box*
-![""](./assets/.png)
+### *1. Console section*
+!["Console Test"](./assets/ConsoleTest.png)
+
+### *1. Console response in Generated-Readme file*
+!["Generateed Readme"](./assets/GeneratedReadme.png)
 
 
 ## Code Snippet
 
-### 
-#### 
-```
-  
-  
+### The main init function:
+#### Prompts user to answer questions and based on the answers generates readme.md
 ```
 
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((userInputs) => {
+            console.log(userInputs);
+            writeToFile('generated/Generated-Readme.md', userInputs);
+        });
+}
+
+```
+
+### The license rendering function:
+#### Based on the license options selected by user returns the license section written to readme.md
+```
+
+function renderLicenseSection(licenseInput) {
+  let link = renderLicenseLink(licenseInput);
+  let licenseSelection = "";
+ 
+  if(licenseInput === "None"){
+    licenseSelection = "This project has no license!";
+  }
+  else{
+    licenseSelection = `This project is licensed under the [${licenseInput}](${link})`;
+  }
+
+  return licenseSelection;
+}
+
+```
 
 ## Technologies Used
 
