@@ -145,7 +145,6 @@ function renderLicenseSection(licenseInput) {
 
 // This function generate markdown for README
 function generateMarkdown(userInputs) {
-  // var licenseSelection = renderLicenseSection(licenseInput);
 
   return `
 
@@ -187,7 +186,7 @@ ${userInputs.testCommand}
 
 $~$
 ## Questions 
-If you have any questions about repo, open an issue or contact me directly at [${userInputs.userEmail}](mailto:${userInputs.userEmail}) You can find more of my work at [GitHub](https://github.com/${userInputs.userName}).
+If you have any questions about repo, open an issue or contact me directly at [${userInputs.userEmail}](mailto:${userInputs.userEmail}). You can find more of my work at [GitHub](https://github.com/${userInputs.userName}).
 
 `;
 }
