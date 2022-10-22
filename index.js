@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Needed aplication packages 
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+//Array of license choices and array of questions for user input
 
 const licenseChoices = ["Apache 2.0 License",
     "Boost Software License 1.0",
@@ -76,14 +76,14 @@ const questions = [
 
 
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, userInputs) {
     fs.writeFile(fileName, generateMarkdown(userInputs), (err) =>
         err ? console.log(err) : console.log('Successfully created new Readme.md!')
     );
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer
         .prompt(questions)

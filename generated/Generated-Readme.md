@@ -26,7 +26,7 @@
 ## Tests
 
 ## Questions 
- If you have any questions about repo, open an issue or contact me directly at [mehmetmusabeyoglu@gmail.com](mailto:mehmetmusabeyoglu@gmail.com) You can find more of my work at [GitHub](https://github.com/MehmetMusabeyoglu).
+ If you have any questions about repo, open an issue or contact me directly at  [mehmetmusabeyoglu@gmail.com](mailto:mehmetmusabeyoglu@gmail.com) You can find more of my work at [GitHub](https://github.com/MehmetMusabeyoglu).
 
  
  
