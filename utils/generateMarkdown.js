@@ -154,9 +154,11 @@ function generateMarkdown(userInputs) {
 # ${userInputs.projectName}
 ${renderLicenseBadge(userInputs.projectLicense)}
 
+$~$
 ## Description
 ${userInputs.projectDescription}
 
+$~$
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -165,23 +167,27 @@ ${userInputs.projectDescription}
 * [Tests](#tests)
 * [Questions](#questions)
 
-
+$~$
 ## Installation
 ${userInputs.dependenciesCommand}
- 
+
+$~$
 ## Usage
 ${userInputs.usingRepo}
 
+$~$
 ## License 
 ${renderLicenseSection(userInputs.projectLicense)}
 
+$~$
 ## Contributing
 ${userInputs.contributingRepo}
 
-
+$~$
 ## Tests
 ${userInputs.testCommand}
 
+$~$
 ## Questions 
 If you have any questions about repo, open an issue or contact me directly at [${userInputs.userEmail}](mailto:${userInputs.userEmail}) You can find more of my work at [GitHub](https://github.com/${userInputs.userName}).
 
