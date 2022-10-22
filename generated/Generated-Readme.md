@@ -1,11 +1,11 @@
 
 
-# Readme Generator 
-[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
+# Ping-Pong Game
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 $~$
 ## Description
-This app for generating professional readme.md
+This app is a simple ping-pong game that runs on browsers
 
 $~$
 ## Table of Contents
@@ -22,15 +22,15 @@ npm install
 
 $~$
 ## Usage
-
+Basic GitHub commands like push and pull 
 
 $~$
 ## License 
-This project is licensed under the [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)
+This project is licensed under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0)
 
 $~$
 ## Contributing
-
+Feel free to contribute however you like 
 
 $~$
 ## Tests

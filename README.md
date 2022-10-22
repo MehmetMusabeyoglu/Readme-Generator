@@ -92,7 +92,7 @@ function renderLicenseSection(licenseInput) {
 
 ## Author Links
 
-[LinkedIn Profile](https://www.linkedin.com/in/mehmet-musabeyo%C4%9Flu-788758a8/)
+[LinkedIn Profile](https://www.linkedin.com/in/mehmet-musabeyoglu)
 <br/>
 [GitHub Profile](https://github.com/MehmetMusabeyoglu)
 <br/>
