@@ -37,7 +37,7 @@ Link to the video that demonstrates the usage of this application can be found a
 ### *1. Console section*
 !["Console Test"](./assets/ConsoleTest.png)
 
-### *1. Console response in Generated-Readme file*
+### *2. Console response in Generated-Readme file*
 !["Generateed Readme"](./assets/GeneratedReadme.png)
 
 
